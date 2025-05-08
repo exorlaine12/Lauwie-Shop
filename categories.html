@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Lauwie Shop</title>
+    <link rel="stylesheet" href="styles.css">
+           <!-- Add to Cart Confirmation Modal -->
+<div id="add-confirm-modal" class="modal-overlay">
+  <div class="modal-box confirm-box">
+    <h2 id="add-confirm-text">Are you sure you want to add this to your cart?</h2>
+    <div class="modal-buttons">
+      <button id="add-confirm-yes" class="btn confirm">Yes, Add</button>
+      <button id="add-confirm-no" class="btn cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+<style>
+ #cart-count {
+      font-size: 16px;
+      color: #fff;
+      background-color: #ff6f61;
+      border-radius: 50%;
+      padding: 5px 10px;
+      margin-left: 5px;
+    }
+
+    /* Glow + Bounce animation */
+    @keyframes glowBounce {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+      }
+      50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 20px rgba(255, 111, 97, 1);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+      }
+    }
+
+    .cart-link a {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .cart-icon {
+      margin-right: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .cart-icon.animate {
+      animation: glowBounce 0.8s ease-in-out;
+    }
+
+      
+      
+    .categories h2 {
+   background-color: #f4a261; /* Highlight color */
+    color: white; /* Text color */
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block; /* Keep it tight around the text */
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align:center;
+}
+        .category {
+            text-align: center;
+            margin-bottom: 80px;
+
+        }
+        
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 250px;
+        }
+    
+</style>
+</head>
+<body>
+<header>
+  <div class="nav-container">
+    <nav>
+      <ul class="nav-links">
+        <li class="logo-home">
+          <img src="images/logo.png" alt="Lauwie Shop Logo" class="logo">
+          <span class="logo-text">Lauwie Shop</span> <!-- Added text here -->
+        </li>
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="categories.html" class="nav-link active">Categories</a></li>
+        <li><a href="aboutus.html" class="nav-link ">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="cart-link">
+          <a href="cart.html">Cart <span class="cart-icon">🛒</span><span id="cart-count">0</span></a>
+        </li>
+        <li><a href="index.html" class="nav-link">Log Out</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <main>
+        <section class="categories">
+            <h1>Product Categories</h1>
+			<br><br>
+
+            <!-- Props Category -->
+            <div class="category">
+                <h2>Props</h2>
+                <div class="product-grid">
+					<div class="product">
+					<a href="weissprops.html">	<img src="images/weissprops.png" alt="Weiss Schnee Sword Props"></a>
+						<h3>Weiss Schnee Sword Props</h3>
+						<p>₱1350</p>
+						<button class="btn add-to-cart" data-name="Weiss Schnee Sword Props" data-price="1350" data-image="images/weissprops.png">Add to Cart</button>
+					</div>
+					<div class="product">
+					<a href="mavuikaboots.html">	<img src="images/mavuika boots.png" alt="MTO Mavuika Boots"></a>
+						<h3>MTO Mavuika Boots</h3>
+						<p>₱1463</p>
+						<button class="btn add-to-cart" data-name="MTO Mavuika Boots" data-price="1463" data-image="images/mavuika boots.png">Add to Cart</button>
+					</div>
+					<div class="product">
+						<a href="xilonenboots.html"><img src="images/xilonen boots.png" alt="MTO Xilonen Boots"></a>
+						<h3>MTO Xilonen Boots</h3>
+						<p>₱1278</p>
+						<button class="btn add-to-cart" data-name="MTO Xilonen Boots" data-price="1278" data-image="images/xilonen boots.png">Add to Cart</button>
+					</div>
+    </div>
+        </div>
+
+            <!-- Costumes Category -->
+            <div class="category">
+                <h2>Costumes</h2>
+                <div class="product-grid">
+					<div class="product">
+						<a href="raiden.html"><img src="images/raiden.png" alt="Raiden Shogun Costume (Uwowo Brand)"></a>
+						<h3>Raiden Shogun Costume</h3>
+						<p>₱4789</p>
+						<button class="btn add-to-cart" data-name="Raiden Shogun Costume (Uwowo Brand)" data-price="4789" data-image="images/raiden.png">Add to Cart</button>
+					</div>
+  <div class="product">
+					<a href="cureprism.html">	<img src="images/cure prism.png" alt="Cure Prism Costume"></a>
+						<h3>Cure Prism Costume</h3>
+						<p>₱1200</p>
+						<button class="btn add-to-cart" data-name="Cure Prism Costume" data-price="1200" data-image="images/cure prism.png">Add to Cart</button>
+					</div>
+					<div class="product">
+					<a href="layla.html">	<img src="images/layla.png" alt="MLBB Layla Aspirants Costume"></a>
+						<h3>MLBB Layla Aspirants</h3>
+						<p>₱2500</p>
+						<button class="btn add-to-cart" data-name="MLBB Layla Aspirants Costume" data-price="2500" data-image="images/layla.png">Add to Cart</button>
+					</div>
+                </div>
+            </div>
+
+            <!-- Wigs Category -->
+            <div class="category">
+                <h2>Wigs</h2>
+                <div class="product-grid">
+                    <div class="product">
+						<a href="xilonenwig.html"><img src="images/xilonen wig.png" alt="Genshin Impact Xilonen Wig"></a>
+						<h3>Genshin Impact Xilonen Wig</h3>
+						<p>₱789</p>
+						<button class="btn add-to-cart" data-name="Genshin Impact Xilonen Wig" data-price="789" data-image="images/xilonen wig.png">Add to Cart</button>
+					</div>
+					<div class="product">
+						<a href="universalwig.html"><img src="images/universal wig.png" alt="Universal Wig(Unbranded)"></a>
+						<h3>Universal Wig(Unbranded)</h3>
+						<p>₱500</p>
+						<button class="btn add-to-cart" data-name="Universal Wig(Unbranded)" data-price="500" data-image="images/universal wig.png">Add to Cart</button>
+					</div>
+					<div class="product">
+						<a href="mavuikawig.html"><img src="images/mavuika wig.png" alt="Genshin Impact Mavuika Wig"></a>
+						<h3>Genshin Impact Mavuika Wig</h3>
+						<p>₱799</p>
+						<button class="btn add-to-cart" data-name="Genshin Impact Mavuika Wig" data-price="799" data-image="images/mavuika wig.png">Add to Cart</button>
+					</div>
+                </div>
+            </div>
+             
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lauwie Shop. All rights reserved.</p>
+    </footer>
+<!-- JavaScript for Adding Items to Cart -->
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style2.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Footer */
+        footer {
+            background-color: #111; /* Adjust to match your design */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            left: 0;
+        } 
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+        <span class="site-name">Lauwie Shop</span>
+    </div>
+</nav>
+    <div class="register-container">
+        <div id="register-message"></div>
+        <h2>Register</h2>
+        <form id="register-form" action="register.php" method="POST">  
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
+            <label>Gender:</label>
+            <div class="gender-options">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female" required> Female</label>
+                <label><input type="radio" name="gender" value="other" required> Other</label>
+            </div><br>
+
+            <label>Age:</label>
+            <select name="age" required>
+                <option value="" disabled selected>Select your age</option>
+                <option value="under_18">Under 18</option>
+                <option value="18-25">18-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-50">36-50</option>
+                <option value="above_50">Above 50</option>
+            </select>
+
+            <button type="submit" class="buttons">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Lauwie Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+    <script>
+        // JavaScript to handle form submission and redirect
+        document.querySelector('#register-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting immediately
+
+            // Simulate successful registration (you can replace this with actual registration logic, such as AJAX)
+            const form = this;
+            
+            // Normally, you would send the data to the server here using fetch/AJAX or form submission.
+
+            // Simulating success and redirecting after registration
+            // Redirect to the homepage after successful registration
+            window.location.href = "home.html"; // Change this to your homepage URL
+        });
+    </script>
+
+</body>
+</html>

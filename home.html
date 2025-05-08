@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lauwie Shop - Online Shopping</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    #cart-count {
+      font-size: 16px;
+      color: #fff;
+      background-color: #ff6f61;
+      border-radius: 50%;
+      padding: 5px 10px;
+      margin-left: 5px;
+    }
+
+    /* Glow + Bounce animation */
+    @keyframes glowBounce {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+      }
+      50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 20px rgba(255, 111, 97, 1);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+      }
+    }
+
+    .cart-link a {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .cart-icon {
+      margin-right: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .cart-icon.animate {
+      animation: glowBounce 0.8s ease-in-out;
+    }
+
+    /* Responsive video container */
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      overflow: hidden;
+      margin: 0 auto 20px;
+      border-radius: 12px;
+      max-width: 1000px; /* Optional: maximum width */
+    }
+
+    .about-logo-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Makes the video nicely fill */
+      border-radius: 12px;
+    }
+  
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+<header>
+  <div class="nav-container">
+    <nav>
+      <ul class="nav-links">
+        <li class="logo-home">
+          <img src="images/logo.png" alt="Lauwie Shop Logo" class="logo">
+          <span class="logo-text">Lauwie Shop</span> <!-- Added text here -->
+        </li>
+        <li><a href="home.html" class="nav-link active">Home</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="categories.html" class="nav-link">Categories</a></li>
+        <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="cart-link">
+          <a href="cart.html">Cart <span class="cart-icon">🛒</span><span id="cart-count">0</span></a>
+        </li>
+        <li><a href="index.html">Log Out</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="video-container">
+        <video id="hero-video" class="about-logo-video" autoplay loop muted playsinline controls>
+          <source src="videos/video2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <h1>Welcome to Lauwie Shop</h1>
+      <p>Your one-stop online store for the best deals!</p>
+      <h2><a href="shop.html" class="btn">Start Shopping</a></h2>
+    </section>
+
+    <!-- Add to Cart Confirmation Modal -->
+    <div id="add-confirm-modal" class="modal-overlay">
+      <div class="modal-box confirm-box">
+        <h2 id="add-confirm-text">Are you sure you want to add this to your cart?</h2>
+        <div class="modal-buttons">
+          <button id="add-confirm-yes" class="btn confirm">Yes, Add</button>
+          <button id="add-confirm-no" class="btn cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Products Section -->
+    <section class="products">
+      <h1>Featured Products</h1>
+      <div class="product-grid">
+        <div class="product">
+          <a href="weissprops.html"><img src="images/weissprops.png" alt="Weiss Schnee Sword Props"></a>
+          <h3>Weiss Schnee Sword Props</h3>
+          <p>₱1350</p>
+          <button class="btn add-to-cart" data-name="Weiss Schnee Sword Props" data-price="1350" data-image="images/weissprops.png">Add to Cart</button>
+        </div>
+        <div class="product">
+          <a href="raiden.html"><img src="images/raiden.png" alt="Raiden Shogun Costume"></a>
+          <h3>Raiden Shogun Costume</h3>
+          <p>₱4789</p>
+          <button class="btn add-to-cart" data-name="Raiden Shogun Costume (Uwowo Brand)" data-price="4789" data-image="images/raiden.png">Add to Cart</button>
+        </div>
+        <div class="product">
+          <a href="mavuikaboots.html"><img src="images/mavuika boots.png" alt="MTO Mavuika Boots"></a>
+          <h3>MTO Mavuika Boots</h3>
+          <p>₱1463</p>
+          <button class="btn add-to-cart" data-name="MTO Mavuika Boots" data-price="1463" data-image="images/mavuika boots.png">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Lauwie Shop. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Adding Items to Cart and Video Play/Pause -->
+  <script src="script.js"></script>
+
+  <script>
+    window.onload = function() {
+      const heroVideo = document.getElementById("hero-video");
+      if (heroVideo) {
+        heroVideo.addEventListener("click", () => {
+          if (heroVideo.paused) {
+            heroVideo.play();
+          } else {
+            heroVideo.pause();
+          }
+        });
+      }
+    };
+  </script>
+</body>
+</html>

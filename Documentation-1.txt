@@ -1,0 +1,24 @@
+Website Name: Julene Shop - Online Shopping
+
+Purpose:
+Welcome to Julene Shop, your ultimate destination for high-quality cosplay costumes, accessories, and art merchandise.
+We are passionate about bringing your favorite characters to life with premium costumes, handmade props, and exclusive fan art.
+Online shopping apps have transformed the way we shop, offering unparalleled convenience and accessibility and  making it easier than ever to find exactly what you need.
+
+Description of the Pages:
+I create a simple design which I want many people to share their craft, arts, MTO, selling of items and more.
+This can help to achieve and invest easier for the seller.
+The user can access the website by scrolling and searching for what they want and need. 
+
+PHASE 1-30%
+-I created a simple pages which I need to put my  the title of my header (Home, About us, Contact). I also included my original logo which is Julene Online Shop.
+I searched a photo which I can used them for my online shop items. I created my background and I chose light color to be more calm and eye catchings.
+
+PHASE 2-50%
+-In phase 2 I change my logo which the name "julene Online" has already taken. I chance the name into "Lauwie Online Shop"
+I created five website which is Index(Home), Shop, Categories,AboutUs, Contact, and Cart. I make tem Accessible which the user can click each of the header. 
+I also include the footer when did I created my pages.I change the margin of my website and make it consistency. I used Scroll tools to my responsive design. 
+
+PHASE 3-75%
+In phase 3, there are so many changes. I changed the color combination of the text which it cannot be reradable by the user,center nav-links,
+Change my responsive design,and the cart must be highlighted if the user click the "Add to Cart" Button.

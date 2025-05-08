@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lauwie Shop - Online Shopping</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+  #cart-count {
+      font-size: 16px;
+      color: #fff;
+      background-color: #ff6f61;
+      border-radius: 50%;
+      padding: 5px 10px;
+      margin-left: 5px;
+    }
+
+    /* Glow + Bounce animation */
+    @keyframes glowBounce {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+      }
+      50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 20px rgba(255, 111, 97, 1);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+      }
+    }
+
+    .cart-link a {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .cart-icon {
+      margin-right: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .cart-icon.animate {
+      animation: glowBounce 0.8s ease-in-out;
+    }
+
+    h1 {
+        text-align: center;
+        background-color: #f4a261;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        display: inline-block;
+        margin: 30px auto;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        text-transform: uppercase;
+    }
+
+    .contact-section {
+        text-align: center; /* centers the inline-block h1 */
+    }
+    /* Responsive Design */
+@media (max-width: 1200px) {
+    .contact-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 column */
+    }
+}
+	</style>
+</head>
+<body> 
+
+   <!-- Navigation Bar -->
+<header>
+  <div class="nav-container">
+    <nav>
+      <ul class="nav-links">
+        <li class="logo-home">
+          <img src="images/logo.png" alt="Lauwie Shop Logo" class="logo">
+          <span class="logo-text">Lauwie Shop</span> <!-- Added text here -->
+        </li>
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="categories.html" class="nav-link">Categories</a></li>
+        <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        <li class="cart-link">
+          <a href="cart.html">Cart <span class="cart-icon">🛒</span><span id="cart-count">0</span></a>
+        </li>
+        <li><a href="index.html" class="nav-link">Log Out</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+
+
+
+    <!-- Main Content -->
+    <main>
+        <section class="contact-section">
+            <h1>Contact Us</h1>
+            <div class="contact-container">
+                <div class="contact-box">
+                    <div class="icon">💼</div> <!-- Business/Sales -->
+                    <h2>Talk to a member of our Sales team</h2>
+                    <p>We’ll help you find the right products and pricing for your business.</p>
+                    <a href="https://www.facebook.com/profile.php?id=61570577220455" class="btn-contact">Contact Sales</a>
+                </div>
+                <div class="contact-box">
+                    <div class="icon">📞</div> <!-- Telephone -->
+                    <h2>Phone Number</h2>
+                    <p>0930-611-6801</p>
+                    <p>0929-361-2606</p>
+                    <a href="" class="btn-contact">Call Us</a>
+                </div>
+                <div class="contact-box">
+                    <div class="icon">📧</div> <!-- Email -->
+                    <h2>Gmail Us</h2>
+                    <p>jhustine22@gmail.com</p>
+                    <p>laineannalfonsolazaro@gmail.com</p>
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&to=jhustineb22@gmail.com,laineannalfonsolazaro@gmail.com&su=Inquiry+About+a+Product&body=Hi+Lauwie+Shop,%0A%0AI+would+like+to+ask+about...&tf=cm" class="btn-contact">Ask any Help</a>
+                </div>
+            </div>
+        </section>
+        
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Lauwie Shop. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript for Adding Items to Cart -->
+<script src="script.js"></script>
+</body>
+</html>
