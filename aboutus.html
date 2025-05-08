@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - ShopLaine</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    #cart-count {
+      font-size: 16px;
+      color: #fff;
+      background-color: #ff6f61;
+      border-radius: 50%;
+      padding: 5px 10px;
+      margin-left: 5px;
+    }
+
+    /* Glow + Bounce animation */
+    @keyframes glowBounce {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+      }
+      50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 20px rgba(255, 111, 97, 1);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+      }
+    }
+
+    .cart-link a {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .cart-icon {
+      margin-right: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .cart-icon.animate {
+      animation: glowBounce 0.8s ease-in-out;
+    }
+
+    /* Responsive logo in the navbar */
+    .logo {
+      width: 100px;
+      max-width: 20vw;
+      height: auto;
+    }
+
+    /* Responsive logo in about section */
+    .about-logo {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="nav-container">
+      <nav>
+        <ul class="nav-links">
+          <li class="logo-home">
+            <img src="images/logo.png" alt="Lauwie Shop Logo" class="logo">
+            <a href="home.html">Home</a>
+          </li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="aboutus.html" class="active">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="cart-link">
+            <a href="cart.html">Cart <span class="cart-icon">🛒</span><span id="cart-count">0</span></a>
+          </li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="about">
+      <img src="images/logo.png" alt="Lauwie Shop Logo" class="about-logo">
+      <h1>About Lauwie Shop</h1>
+      <p>Welcome to Lauwie Shop, your ultimate destination for high-quality cosplay costumes, accessories, and art merchandise.</p>
+      <p>We are passionate about bringing your favorite characters to life with premium costumes, handmade props, and exclusive fan art.</p>
+      <p>Online shopping apps have transformed the way we shop, offering unparalleled convenience and accessibility and making it easier than ever to find exactly what you need.</p>
+      <p>Have questions? Feel free to <a href="contact.html">Contact Us</a>.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Lauwie Shop. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Adding Items to Cart -->
+  <script src="script.js"></script>
+</body>
+</html>
